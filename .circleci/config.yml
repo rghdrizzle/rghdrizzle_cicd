@@ -3,9 +3,6 @@ orbs:
   node: circleci/node@4.7
 jobs:
   build-and-test:
-    branches:
-      only:
-        -master
     executor: 
       name: node/default
     steps:
@@ -20,7 +17,6 @@ workflows:
       - node/test:
           version: '16.10'
           pkg-manager: npm
-
       - build-and-test:
           filter:
             branches:
