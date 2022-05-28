@@ -18,6 +18,6 @@ workflows:
           version: '16.10'
           pkg-manager: npm
       - build-and-test:
-          filter:
+          filters:
             branches:
               only: master
