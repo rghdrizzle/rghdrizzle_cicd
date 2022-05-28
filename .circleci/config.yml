@@ -20,4 +20,8 @@ workflows:
       - node/test:
           version: '16.10'
           pkg-manager: npm
-      - build-and-test
+
+      - build-and-test:
+          filter:
+            branches:
+              only: master
